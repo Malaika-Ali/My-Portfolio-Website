@@ -22,19 +22,29 @@
 body {
     background-color: var(--body-color);
     color: white;
+    width: 100%;
 }
 
 /* Customized Scroll bar */
-html::-webkit-scrollbar{
+html::-webkit-scrollbar {
     width: 0.5rem;
     background: transparent;
 }
-html::-webkit-scrollbar-thumb{
+
+html::-webkit-scrollbar-thumb {
     background: var(--main-color);
 }
 
 section {
     padding: 3rem 0 2rem;
+    margin-inline: auto;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.container {
+    margin-inline: auto;
+    width: 100%;
 }
 
 /******************************************* Navbar ******************************************************/
@@ -45,7 +55,7 @@ header nav {
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
 }
 
 header nav ul {
@@ -60,7 +70,7 @@ header nav ul {
     color: var(--main-color);
     padding-left: 2%;
     /* padding-right: 350px; */
-    padding-right: 42%;
+    padding-right: 47%;
     width: 8%;
     font-size: 35px;
     line-height: 80px;
@@ -129,27 +139,32 @@ header nav ul li a:hover {
 
     .menu-icon {
         display: block;
-        margin-right: 20px;
+        /* margin-right: 20px; */
     }
 
-    header nav ul{
-        
-        height: 100vh;
+    header nav {
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 2%;
+    }
+
+    header nav ul {
+
+        height: 100%;
         position: absolute;
         top: 5%;
         left: -100%;
         width: 100%;
-        height: 80vh;
         z-index: 100;
         display: flex;
         justify-content: flex-start;
         flex-direction: column;
         padding-top: 20%;
-       background: var(--main-color);
+        background: var(--main-color);
         border-radius: 10px;
         transition: all .50s ease;
     }
-   
+
 
 
     header nav ul li a {
@@ -175,7 +190,7 @@ header nav ul li a:hover {
 
 
 
-/* Home */
+/******************************************* Hero section/ Home Section ******************************************************/
 .home {
     min-height: 600px;
     display: flex;
@@ -200,11 +215,11 @@ header nav ul li a:hover {
 /* Profile Picture */
 .home-img {
     width: 36%;
-    margin-top: -15%;
+    margin-top: -17%;
 
 }
 
-.profile-pic{
+.profile-pic {
     width: 100%;
 }
 
@@ -281,12 +296,18 @@ header nav ul li a:hover {
     transition: 0.3s all linear;
 }
 
+/******************************************* About ******************************************************/
+
+.about {
+    margin-top: -6vmax;
+}
+
 .about-data {
-    padding-left: 8rem;
+    padding-left: 6rem;
     padding-right: 2rem;
 }
 
-.about-text{
+.about-text {
     margin-left: 8px;
 }
 
@@ -302,12 +323,12 @@ header nav ul li a:hover {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 1.5em;
-    padding-left: 2rem;
+    padding-left: 0rem;
     padding-right: 4rem;
 }
 
 .about-data span {
-    font-size: 1rem;
+    font-size: 1.2rem;
     font-weight: 500;
     text-transform: uppercase;
     color: var(--main-color);
@@ -349,12 +370,16 @@ header nav ul li a:hover {
     margin-bottom: 1.5em;
 }
 
+/******************************************* Services ******************************************************/
+
 .services-content {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    /* grid-template-columns: repeat(3, 1fr); */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 4rem;
     padding-left: 5rem;
     padding-right: 5rem;
+    margin-inline: auto;
 }
 
 .services-box {
@@ -392,7 +417,7 @@ header nav ul li a:hover {
     font-size: 0.9rem;
 }
 
-/* Portfolio */
+/******************************************* Portfolio ******************************************************/
 .portfolio-content {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -455,6 +480,8 @@ header nav ul li a:hover {
     transition: 0.3s all ease;
 }
 
+/******************************************* Projects ******************************************************/
+
 .projects-content {
     display: grid;
     grid-template-columns: repeat(3, 200px);
@@ -477,7 +504,7 @@ header nav ul li a:hover {
     font-size: 0.845rem;
 }
 
-/* Contact Form */
+/******************************************* Contact form ******************************************************/
 .contact-form {
     max-width: 600px;
     margin: auto;
@@ -513,6 +540,8 @@ header nav ul li a:hover {
     transition: 0.3s all linear;
 }
 
+/******************************************* Footer ******************************************************/
+
 .footer {
     display: flex;
     align-items: center;
@@ -546,6 +575,8 @@ header nav ul li a:hover {
     font-size: 0.9rem;
 }
 
+/******************************************* scroll top button ******************************************************/
+
 .scroll-top {
     position: fixed;
     bottom: -100%;
@@ -565,16 +596,41 @@ header nav ul li a:hover {
     transition: 0.3s;
 }
 
-.scroll-active{
+.scroll-active {
     bottom: 2rem;
     transition: 0.3s;
 }
 
-/* Responsiveness  */
+/******************************************* Media Queries ******************************************************/
+@media (max-width: 1090px) {
+    header nav {
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+
 @media (max-width: 990px) {
     .container {
         margin: 0 auto;
         width: 90%;
+    }
+
+    header nav {
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .heading{
+        font-size: 2.8rem;
+    }
+
+    .home-text h2{
+        font-size: 3rem;
+    }
+
+    .home{
+        margin-bottom: -10%;
     }
 }
 
@@ -590,6 +646,21 @@ header nav ul li a:hover {
     .portfolio-box {
         height: 257px;
     }
+
+    .contact-form .send-btn {
+        padding: 15px;
+        font-size: 0.8rem;
+        width: 95px;
+    }
+
+    .heading{
+        font-size: 2.5rem;
+    }
+
+    .home{
+        margin-bottom: -5%;
+    }
+
 }
 
 @media (max-width: 775px) {
@@ -613,16 +684,52 @@ header nav ul li a:hover {
 
     .services-content {
         grid-template-columns: repeat(2, 1fr);
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+
+    .services-box {
+        width: 107%;
+    }
+
+    .portfolio-content {
+        padding-left: 1rem;
+        padding-right: 1rem;
     }
 
     .portfolio-box {
-        height: 245px;
+        /* height: 245px; */
+        width: 103%;
+    }
+
+    header nav {
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .home-img {
+        margin-top: -6%;
+    }
+
+    .about-data {
+        padding-left: 2rem;
+        padding-right: 1rem;
     }
 }
 
 @media (max-width: 635px) {
     .about-content {
         grid-template-columns: 1fr;
+        padding-right: 0;
+        width: 100%;
+    }
+
+    .about-data {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
     }
 
     .about-data span {
@@ -634,6 +741,16 @@ header nav ul li a:hover {
         line-height: 2.3rem;
         font-weight: 600;
         margin: 0.8rem 0;
+    }
+
+    .about-text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-left: 0 !important;
+        margin-inline: auto;
+        padding-inline: auto;
     }
 
     .about-text p {
@@ -648,82 +765,166 @@ header nav ul li a:hover {
     .services-content {
         display: grid;
         gap: 1rem;
-        padding-left: 2rem;
-        padding-right: 2rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
     }
 
     .services-box {
-        width: 220px;
+        width: 100%;
     }
 
-    header nav{
-        gap: 30%;
+    header nav {
+        /* gap: 30%; */
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .menu-icon {
+        margin-right: -10vmax
+    }
+
+    .contact-form .send-btn {
+        padding: 10px;
+        font-size: 0.8rem;
+        width: 80px;
     }
 }
 
-@media (max-width:450px){
 
-    
-    header nav{
-        gap: 35%;
+
+
+/* Error  */
+@media (max-width: 560px) {
+
+    /* .services-content,
+    .portfolio-content,
+    .projects-content{
+        grid-template-columns: 1fr;
+    } */
+
+    .services-box {
+        width: 100%;
     }
 
-    .home{
+}
+
+@media (max-width:450px) {
+    header nav {
+        /* gap: 35%; */
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .home {
         min-height: 485px;
         padding-top: 5rem;
     }
-    .home-img{
+
+    .home-img {
         width: 140px;
         height: 140px;
     }
-    label.logo{
-        padding-left: 300px;
+
+    label.logo {
         font-size: 25px;
-        padding-right: 90px;
     }
-    .menu-icon{
-        padding-right: 28s0px;
-        /* padding-left: 150px; */
+
+    .menu-icon {
+        margin-right: -10vw;
     }
-    .home-img img{
+
+    .home-img img {
         width: 140px;
         height: 140px;
     }
-    .home-text p br{
+
+    .home-text p br {
         display: contents;
     }
-    .heading{
-        font-size: 3rem;
+
+    .heading {
+        font-size: 2.5rem;
     }
-    .about-data h2{
+
+    .about-data h2 {
         font-size: 1.5rem;
         line-height: 2.1rem;
         margin: 0.6rem 0;
     }
+
     .services-content,
     .portfolio-content,
-    .projects-content{
+    .projects-content {
         grid-template-columns: 1fr;
     }
-    .services-box
-     {
-        width: 322px;
-      }
-      .portfolio-box{
-        width: 352px;
-        padding-right: 5px ;
+
+    .portfolio-box {
+        width: 120%;
+        /* padding-right: 5px ; */
         height: 181px;
-      }
-      .portfolio-content {
+    }
+
+    .portfolio-content {
         padding-left: 1rem;
-      }
-      .contact-form{
+    }
+
+    .project-box{
+        width: 90%;
+        padding-inline: 0;
+        margin-inline: auto;
+    }
+
+    .contact-form {
         margin-right: 10px;
-      }
+    }
+
+    .contact-form .send-btn {
+        padding: 8px;
+        font-size: 0.8rem;
+        width: 75px;
+    }
 }
 
-@media (max-width:325px){
-    .portfolio-box{
+@media (max-width:370px) {
+    .menu-icon {
+        margin-right: -26vw;
+    }
+
+    header nav {
+        justify-content: space-between;
+    }
+
+    .btn {
+        padding: 6px 16px;
+    }
+
+    .contact-form .send-btn {
+        padding: 8px;
+        font-size: 0.98rem;
+        width: 90px;
+    }
+}
+
+@media (max-width:325px) {
+
+    .heading {
+        font-size: 1.3rem;
+    }
+
+    .portfolio-box {
         height: 180px;
+    }
+
+    header nav {
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .services-content {
+        padding-left: 1.5rem;
+    }
+
+    .about-text {
+        flex-wrap: wrap;
     }
 }
