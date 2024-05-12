@@ -16,6 +16,17 @@
     <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
     <link rel="stylesheet" href="skills-section.css">
 
+    <!-- EmailJs Services Connection -->
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init( "jVi-Un9H4Pu2S-UuO"
+      );
+   })();
+</script>
+
 </head>
 
 <body>
@@ -79,22 +90,19 @@
                 <h2>Frontend
                     <br> Web Developer
                 </h2>
-                <a href="My Resume.pdf" class="btn" download="">Download Resume <i class='bx bx-download'></i></a>
+                <a href="Malaika_Ali_Frontend_Developer.pdf" class="btn" download="">Download Resume <i class='bx bx-download'></i></a>
             </div>
 
             <div class="about-text">
-                <p>🚀 Seeking a seasoned frontend web developer with a flair for excellence? Your search ends here. I
-                    use HTML, CSS, JavaScript, Bootstrap and React to create websites that look amazing and work
-                    perfectly. I may not have years of experience, but my dedication to creating exceptional websites
-                    shines through. Armed with HTML, CSS, JavaScript, React and Bootstrap, I specialize in building
-                    websites that seamlessly merge style with functionality.</p>
-                <p>Each project is a unique canvas where I bring your vision to life, ensuring that your website not
-                    only looks visually appealing but also functions flawlessly on various devices. My focus is on
-                    achieving high conversion rates, translating clicks into customers.
+                <p>Tired of cookie-cutter websites?  I'm Malaika Ali, a passionate frontend developer obsessed with building exceptional digital experiences.  With a toolbox full of expertise in HTML, CSS, JavaScript, React.js, Bootstrap, and Tailwind CSS, I transform ideas into beautifully functional websites.</p>
+                <p>I may not have decades of experience, but my hunger to learn and dedication to excellence mean I bring a fresh approach to every project.
+                    Every website is a strategic masterpiece. My focus is on user experience and driving results, turning clicks into conversions.
                 </p>
                 <p>I prioritize professionalism, timely delivery, and open communication to provide you with a
                     collaborative experience. Let's embark on this digital journey together and make your online
                     presence truly exceptional! 🌟✨</p>
+                
+                    <p>Ready to craft your website's success story?  Let's chat! </p>
             </div>
         </div>
     </section>
@@ -152,6 +160,13 @@
                         </div>
                     </div>
 
+                    <div class="skill">
+                        <div class="subject">Tailwind CSS</div>
+                        <div class="progress-bar" value="70%">
+                            <div class="progress-line" style="max-width: 70%"></div>
+                        </div>
+                    </div>
+
                 </div>
             </section>
 
@@ -178,13 +193,6 @@
                         <div class="subject">UI Design</div>
                         <div class="progress-bar" value="80%">
                             <div class="progress-line" style="max-width: 80%"></div>
-                        </div>
-                    </div>
-
-                    <div class="skill">
-                        <div class="subject">Figma</div>
-                        <div class="progress-bar" value="30%">
-                            <div class="progress-line" style="max-width: 30%"></div>
                         </div>
                     </div>
 
@@ -246,6 +254,28 @@
     <section class="portfolio container" id="portfolio">
         <h2 class="heading">{Portfolio}</h2>
         <div class="portfolio-content">
+
+            <div class="portfolio-box">
+                <img src="dashboard.PNG" class="portfolio-img">
+                <div class="portfolio-overlay">
+                    <h2>Motors Performance Management Dashboard</h2>
+                    <h3>Using ReactJs & Tailwind CSS</h3>
+                    <a href="https://github.com/Malaika-Ali/Dashboard.git">
+                        <i class='bx bx-link-alt'></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="portfolio-box">
+                <img src="yt-clone.PNG" class="portfolio-img">
+                <div class="portfolio-overlay">
+                    <h2>ViewTube-Youtube Clone</h2>
+                    <h3>Using ReactJs & Tailwind CSS</h3>
+                    <a href="https://viewtube-youtube-clone.vercel.app/">
+                        <i class='bx bx-link-alt'></i>
+                    </a>
+                </div>
+            </div>
 
               <div class="portfolio-box">
                 <img src="Pizzatron-web.PNG" class="portfolio-img">
@@ -364,8 +394,8 @@
 
 
     <!-- Email Js Link -->
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
-    </script>
+    <!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+    </script> -->
 
     <!-- Sweet alert -->
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>

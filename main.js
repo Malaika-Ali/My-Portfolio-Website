@@ -26,11 +26,18 @@ function validate(){
     })
 }
 
+
+// function sendMail(){
+//     let params={
+
+//     }
+// }
+
 validate();
 
 function sendemail(name, email, msg){
     
-    emailjs.send("service_b12bu9t","template_j5vf8vq",{
+    emailjs.send("service_pizmv7o","service_pizmv7o",{
         from_name: email,
         to_name: name,
         message: msg,
