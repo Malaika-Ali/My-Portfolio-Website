@@ -621,15 +621,15 @@ header nav ul li a:hover {
         align-items: center;
     }
 
-    .heading{
+    .heading {
         font-size: 2.8rem;
     }
 
-    .home-text h2{
+    .home-text h2 {
         font-size: 3rem;
     }
 
-    .home{
+    .home {
         margin-bottom: -10%;
     }
 }
@@ -653,11 +653,11 @@ header nav ul li a:hover {
         width: 95px;
     }
 
-    .heading{
+    .heading {
         font-size: 2.5rem;
     }
 
-    .home{
+    .home {
         margin-bottom: -5%;
     }
 
@@ -868,7 +868,7 @@ header nav ul li a:hover {
         padding-left: 1rem;
     }
 
-    .project-box{
+    .project-box {
         width: 90%;
         padding-inline: 0;
         margin-inline: auto;
